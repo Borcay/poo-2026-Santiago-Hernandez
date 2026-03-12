@@ -29,25 +29,20 @@ public class Estudiante {
         System.out.println("Materias inscritas: " + materias.size());
     }
 
-    //Metodo para estudiar
-    public void estudiar(int horas) { 
-        System.out.println(nombre + " estudió " + horas + " horas"); 
-    } 
-
     // Método main para probar
     public static void main(String[] args) {
         // Crear objetos
-        Estudiante est3 = new Estudiante("Santiago Hernandez", 21, "Tec. Sist. Datos");
+        Estudiante est1 = new Estudiante("Ana García", 20, "Ing. Sistemas");
+        Estudiante est2 = new Estudiante("Carlos López", 22, "Ing. Sistemas");
 
         // Usar métodos
+        est1.presentarse();
         System.out.println("---");
-        est3.inscribirMateria("POO");
-        est3.inscribirMateria("Calculo 2");
-        est3.inscribirMateria("Estructuras de datos");
-        est3.inscribirMateria("Textos 2");
-        est3.inscribirMateria("Fisica 1");
-        est3.inscribirMateria("Catedra contexto");
-        est3.presentarse();
-        est3.estudiar(10);
+        est1.inscribirMateria("POO");
+        est1.inscribirMateria("Bases de Datos");
+
+        System.out.println("---");
+        est2.presentarse();
+        est2.inscribirMateria("POO");
     }
 }
