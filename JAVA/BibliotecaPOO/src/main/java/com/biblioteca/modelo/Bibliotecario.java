@@ -2,9 +2,9 @@ package com.biblioteca.modelo;
 
 public class Bibliotecario extends Persona {
 
-    private double salario;
+    private final int salario;
 
-    public Bibliotecario(String nombre, String identificacion, double salario) {
+    public Bibliotecario(String nombre, String identificacion, int salario) {
         super(nombre, identificacion);
         this.salario = salario;
     }

@@ -1,9 +1,11 @@
 package com.biblioteca.modelo;
 
-public class Libro {
+import com.biblioteca.interfaz.Prestable;
 
-    private String titulo;
-    private String autor;
+public class Libro implements Prestable {
+
+    private final String titulo;
+    private final String autor;
     private boolean disponible;
 
     public Libro(String titulo, String autor) {
@@ -12,24 +14,31 @@ public class Libro {
         this.disponible = true;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitulo() { 
+        return titulo; 
+    }
+    
+    public String getAutor() { 
+        return autor; 
     }
 
-    public boolean isDisponible() {
-        return disponible;
+    @Override
+    public boolean isDisponible() { 
+        return disponible; 
     }
 
-    public void prestar() {
-        disponible = false;
+    @Override
+    public void prestar() { 
+        disponible = false; 
     }
 
-    public void devolver() {
-        disponible = true;
+    @Override
+    public void devolver() { 
+        disponible = true; 
     }
 
     public void mostrarLibro() {
-        System.out.println("Título: " + titulo);
+        System.out.println("Titulo: " + titulo);
         System.out.println("Autor: " + autor);
         System.out.println("Disponible: " + disponible);
     }
