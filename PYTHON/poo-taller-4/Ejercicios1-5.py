@@ -73,3 +73,4 @@ p2.setHp(0)
 
 g.limpiar_caidos()
 g.reporte_gremio()
+
